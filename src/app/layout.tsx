@@ -17,6 +17,9 @@ const pretendard = localFont({
 export const metadata: Metadata = {
   title: "이지은 | 포트폴리오",
   description: "안녕하세요 이지은입니다!",
+  icons: {
+    icon: "/icons/favicon.ico",
+  },
 };
 
 export default function RootLayout({
