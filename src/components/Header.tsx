@@ -1,9 +1,12 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <div>
-      Header
-      <br />
-      안녕하세요 헤더입니다
+      <Link href="/">Home</Link>
+      <Link href="/about">About</Link>
+      <Link href="/projects">Projects</Link>
+      <Link href="/contact">Contact & Feedback</Link>
     </div>
   );
 }
