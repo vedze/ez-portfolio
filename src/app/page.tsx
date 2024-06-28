@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 
-import HomePage from "./(home)/page";
-import About from "./about/page";
+import HomePage from "./home/page";
+import About from "./intro/page";
 import Contact from "./contact/page";
 import Projects from "./projects/page";
 
