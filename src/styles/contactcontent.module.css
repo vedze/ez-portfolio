@@ -1,4 +1,4 @@
-.contactText {
+.feedbackText {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,16 +8,14 @@
   padding: 20px;
 }
 
-/* Feedback styling */
-
-.contactInput {
+.feedbackInput {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.contactInput textarea {
+.feedbackInput textarea {
   border: 2px solid #aeaeae;
   border-radius: 20px;
   background-color: #fbf7f3;
@@ -41,7 +39,7 @@
   }
 }
 
-.contactInput button {
+.feedbackInput button {
   background-color: #8daa77;
   color: #fbf7f3;
   border: none;

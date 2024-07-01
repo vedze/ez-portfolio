@@ -1,11 +1,11 @@
 import CommonFrame from "@/components/CommonFrame";
-import ContactContent from "./ContactContent";
+import FeedbackContent from "./FeedbackContent";
 
 export default function Contact() {
   return (
     <CommonFrame
       sectionName="Contact & Feedback"
-      content={<ContactContent />}
+      content={<FeedbackContent />}
     />
   );
 }
