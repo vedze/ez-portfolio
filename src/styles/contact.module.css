@@ -1,11 +1,3 @@
-.contactContainer {
-  display: flex;
-  flex-direction: column;
-
-  height: 100vh;
-  padding: 30px;
-}
-
 .contactText {
   display: flex;
   flex-direction: column;
