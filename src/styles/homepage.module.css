@@ -1,5 +1,6 @@
 .background {
-  background-image: url("/images/profile1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/profile1.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -15,4 +16,19 @@
 
 .homeText span {
   font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.homeText span::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  transform: translateY(50%);
+  z-index: -1;
+
+  width: 100%;
+  height: 5px;
+  background-color: #8daa77;
 }
