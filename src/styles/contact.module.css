@@ -1,0 +1,23 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  padding: 30px;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  line-height: 2em;
+  padding: 20px;
+}
+
+.contactInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
