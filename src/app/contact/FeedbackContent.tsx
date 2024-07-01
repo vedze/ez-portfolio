@@ -1,5 +1,6 @@
-import styles from "@/styles/contactcontent.module.css";
+import styles from "@/styles/feedbackcontent.module.css";
 import { PLACE_HOLDER } from "@/util/constants";
+import Button from "@/components/Button";
 
 export default function FeedbackContent() {
   return (
@@ -13,7 +14,7 @@ export default function FeedbackContent() {
       </div>
       <div className={styles.feedbackInput}>
         <textarea placeholder={PLACE_HOLDER} />
-        <button type="submit">피드백 보내기</button>
+        <Button type="submit" text="피드백 보내기" />
       </div>
     </div>
   );
