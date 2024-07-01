@@ -16,8 +16,50 @@
   padding: 20px;
 }
 
+/* Feedback styling */
+
 .contactInput {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+}
+
+.contactInput textarea {
+  border: 2px solid #aeaeae;
+  border-radius: 20px;
+  background-color: #fbf7f3;
+
+  font-size: 13px;
+  font-family: var(--font-pretendard);
+
+  width: 500px;
+  height: 100px;
+  padding: 10px;
+  resize: none;
+
+  &:focus {
+    outline-color: #8daa77;
+    color: #8daa77;
+  }
+
+  &::placeholder {
+    color: #aeaeae;
+    font-size: 13px;
+  }
+}
+
+.contactInput button {
+  background-color: #8daa77;
+  color: #fbf7f3;
+  border: none;
+  border-radius: 20px;
+
+  width: 120px;
+
+  font-size: 12px;
+  font-family: var(--font-pretendard);
+
+  padding: 10px 0px;
+  cursor: pointer;
 }
