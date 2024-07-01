@@ -1,3 +1,14 @@
+import styles from "@/styles/introduce.module.css";
+
 export default function Introduce() {
-  return <div>Introduction Page 입니다.</div>;
+  return (
+    <div className={styles.introText}>
+      <p>introduction 페이지 설명입니다.</p>
+      <p>introduction 페이지 설명입니다.</p>
+      <p>introduction 페이지 설명입니다.</p>
+      <p>introduction 페이지 설명입니다.</p>
+      <br />
+      <p>introduction 페이지 설명입니다.</p>
+    </div>
+  );
 }
