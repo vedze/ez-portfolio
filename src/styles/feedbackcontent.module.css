@@ -20,6 +20,7 @@
   border-radius: 20px;
   background-color: #fbf7f3;
 
+  color: #aeaeae;
   font-size: 13px;
   font-family: var(--font-pretendard);
 
@@ -30,6 +31,9 @@
 
   &:focus {
     outline-color: #8daa77;
+    color: #8daa77;
+  }
+  &:focus::placeholder {
     color: #8daa77;
   }
 
