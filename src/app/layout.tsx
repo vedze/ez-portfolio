@@ -32,7 +32,6 @@ export default function RootLayout({
       <body className={pretendard.className}>
         <Sidebar />
         <div style={{ marginRight: "200px" }}>{children}</div>
-        <Footer />
       </body>
     </html>
   );
