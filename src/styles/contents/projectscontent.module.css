@@ -2,27 +2,57 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px;
 }
 
 .project {
-  padding: 20px;
-  /* line-height: 2em; */
+  margin-bottom: 50px;
 }
 
-.project div {
-  margin-bottom: 10px;
+.titleSection {
+  margin-bottom: 50px;
 }
 
-.project ul {
-  list-style-type: none;
-  padding: 0;
+/* type */
+.titleSection div {
+  font-size: 25px;
+  font-weight: 400;
 }
 
-.project li {
-  display: inline-block;
-  border-radius: 5px;
-  margin-right: 10px;
-  padding: 5px 10px;
+/* title */
+.titleSection h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 15px 0;
+}
 
-  background-color: #aeaeae;
+/* date */
+.titleSection time {
+  font-size: 18px;
+  font-weight: 350;
+}
+
+/* summary */
+.summarySection div {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* skills */
+.skillSection {
+  margin-top: 30px;
+}
+
+.skillSection p,
+.linkSection p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.skillSection div,
+.linkSection div {
+  display: flex;
+  margin-bottom: 5px;
+
+  font-size: 20px;
 }
