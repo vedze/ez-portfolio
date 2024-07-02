@@ -11,7 +11,8 @@ export default function Sidebar() {
         <Link href="/home">Home</Link>
         <Link href="/introduce">Introduction</Link>
         <Link href="/projects">Projects</Link>
-        <Link href="/contact">Contact & Feedback</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/feedback">Feedback</Link>
       </div>
       <div className={styles.infoText}>
         <div>🍀 {PHONE_NUM}</div>

@@ -4,6 +4,7 @@ import HomePage from "./home/page";
 import Introduce from "./introduce/page";
 import Contact from "./contact/page";
 import Projects from "./projects/page";
+import Feedback from "./feedback/page";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Introduce />
         <Projects />
         <Contact />
+        <Feedback />
       </div>
     </main>
   );
