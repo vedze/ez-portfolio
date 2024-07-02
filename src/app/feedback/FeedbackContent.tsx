@@ -1,4 +1,4 @@
-import styles from "@/styles/feedbackcontent.module.css";
+import styles from "@/styles/contents/feedbackcontent.module.css";
 import { PLACE_HOLDER } from "@/util/constants";
 import Button from "@/components/Button";
 
