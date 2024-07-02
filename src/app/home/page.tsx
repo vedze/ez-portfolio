@@ -3,7 +3,7 @@ import { CATCH_PHRASE } from "@/util/constants";
 
 export default function HomePage() {
   return (
-    <div className={styles.background}>
+    <div className={styles.homepage}>
       <div className={styles.homeText}>
         <p>{CATCH_PHRASE}</p>
         <p>

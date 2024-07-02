@@ -8,7 +8,7 @@ interface FrameProps {
 
 export default function CommonFrame({ sectionName, content }: FrameProps) {
   return (
-    <div className={styles.frameContainer}>
+    <div className={styles.commonFrame}>
       <Section name={sectionName} />
       {content ? content : "아직 content가 없습니다."}
     </div>
