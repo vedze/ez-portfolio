@@ -1,3 +1,6 @@
+import CommonFrame from "@/components/CommonFrame";
+import ContactContent from "./ContactContent";
+
 export default function Contact() {
-  return <div>Contact & Feedback Page 입니다.</div>;
+  return <CommonFrame sectionName="Contact" content={<ContactContent />} />;
 }

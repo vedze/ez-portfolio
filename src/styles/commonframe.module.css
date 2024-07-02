@@ -1,0 +1,8 @@
+.commonFrame {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  height: 100vh;
+  padding: 30px;
+}

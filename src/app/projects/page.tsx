@@ -1,3 +1,6 @@
+import CommonFrame from "@/components/CommonFrame";
+import ProjectsContent from "./ProjectsContent";
+
 export default function Projects() {
-  return <div>Projects Page 입니다.</div>;
+  return <CommonFrame sectionName="Projects" content={<ProjectsContent />} />;
 }
