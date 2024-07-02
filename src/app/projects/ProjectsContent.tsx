@@ -1,19 +1,18 @@
+import styles from "@/styles/contents/projectscontent.module.css";
+
+import { projects } from "@/util/projects";
+import Project from "@/components/Project";
 import Button from "@/components/Button";
 
 export default function ProjectsContent() {
   return (
-    <div>
-      <div>personal/team</div>
-      <div>Project Title</div>
-      <div>date</div>
-      <div>summary</div>
-      <div>
-        used skills
-        <li>React</li>
-        <li>Typescript</li>
-        <li>NextJS</li>
-      </div>
-      <Button type="button" text="보러가기" />
+    <div className={styles.projectsContent}>
+      {projects.map((project, idx) => (
+        <div key={idx}>
+          <Project project={project} />
+          <Button type="button" text="보러가기" />
+        </div>
+      ))}
     </div>
   );
 }
