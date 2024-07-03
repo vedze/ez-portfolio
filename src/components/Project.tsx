@@ -1,5 +1,5 @@
 import styles from "@/styles/contents/projectscontent.module.css";
-import { ProjectType } from "@/util/projects";
+import { ProjectType } from "@/config/projects";
 
 interface ProjectProps {
   project: ProjectType;

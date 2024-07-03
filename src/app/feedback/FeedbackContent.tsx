@@ -1,5 +1,5 @@
 import styles from "@/styles/contents/feedbackcontent.module.css";
-import { PLACE_HOLDER } from "@/util/constants";
+import { PLACE_HOLDER } from "@/config/constants";
 import Button from "@/components/Button";
 
 export default function FeedbackContent() {

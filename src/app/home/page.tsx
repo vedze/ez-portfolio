@@ -1,7 +1,7 @@
 import styles from "@/styles/homepage.module.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-import { CATCH_PHRASE } from "@/util/constants";
+import { CATCH_PHRASE } from "@/config/constants";
 
 export default function HomePage() {
   return (

@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 
 import "@/styles/globals.css";
 import styles from "@/styles/layout.module.css";
-import Sidebar from "@/components/Sidebar";
+import SideBar from "@/components/SideBar";
 
 const mont = Montserrat({ subsets: ["latin"], weight: ["400"] });
 const pretendard = localFont({
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={`${pretendard.className} ${styles.container}`}>
         <div className={styles.content}>{children}</div>
         <nav className={styles.sidebar}>
-          <Sidebar />
+          <SideBar />
         </nav>
       </body>
     </html>

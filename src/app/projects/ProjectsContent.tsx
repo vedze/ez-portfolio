@@ -1,6 +1,6 @@
 import styles from "@/styles/contents/projectscontent.module.css";
 
-import { projects } from "@/util/projects";
+import { projects } from "@/config/projects";
 import Project from "@/components/Project";
 
 export default function ProjectsContent() {

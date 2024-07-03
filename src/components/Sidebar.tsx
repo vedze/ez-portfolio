@@ -1,9 +1,9 @@
 import styles from "@/styles/components/sidebar.module.css";
-import { LAST_UPDATED, EMAIL_ADD, PHONE_NUM } from "@/util/constants";
+import { LAST_UPDATED, EMAIL_ADD, PHONE_NUM } from "@/config/constants";
 
 import Link from "next/link";
 
-export default function Sidebar() {
+export default function SideBar() {
   return (
     <div className={styles.sidebar}>
       <div className={styles.dateText}>last updated: {LAST_UPDATED}</div>
