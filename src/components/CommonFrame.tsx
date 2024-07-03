@@ -1,4 +1,4 @@
-import styles from "@/styles/commonframe.module.css";
+import styles from "@/styles/components/commonframe.module.css";
 import Section from "./Section";
 
 interface FrameProps {

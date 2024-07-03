@@ -1,4 +1,4 @@
-import styles from "@/styles/sidebar.module.css";
+import styles from "@/styles/components/sidebar.module.css";
 import { LAST_UPDATED, EMAIL_ADD, PHONE_NUM } from "@/util/constants";
 
 import Link from "next/link";
