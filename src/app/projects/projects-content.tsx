@@ -1,7 +1,7 @@
 import styles from "@/styles/contents/projectscontent.module.css";
 
 import { projects } from "@/config/projects";
-import Project from "@/components/Project";
+import Project from "@/app/projects/project-form";
 
 export default function ProjectsContent() {
   return (
