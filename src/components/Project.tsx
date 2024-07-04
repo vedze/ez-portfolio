@@ -1,4 +1,5 @@
 import styles from "@/styles/contents/projectscontent.module.css";
+import { FiCheck } from "react-icons/fi";
 import { ProjectType } from "@/config/projects";
 
 interface ProjectProps {
@@ -16,14 +17,20 @@ function Project({ project }: ProjectProps) {
 
       <section className={styles.summarySection}>
         {project.summaries.map((summary, idx) => (
-          <div key={idx}>✅ {summary}</div>
+          <div key={idx}>
+            <FiCheck color="#8daa77" />
+            &nbsp;{summary}
+          </div>
         ))}
       </section>
 
       <section className={styles.skillSection}>
         <p>사용 기술</p>
         {project.skills.map((skill, idx) => (
-          <div key={idx}>{skill}</div>
+          <div key={idx}>
+            <FiCheck color="#8daa77" />
+            &nbsp;{skill}
+          </div>
         ))}
       </section>
       <section className={styles.linkSection}>

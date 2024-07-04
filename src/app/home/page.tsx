@@ -11,9 +11,7 @@ export default function HomePage() {
         <p>
           <span>이지은</span> 입니다.
         </p>
-        <div className={styles.homeArrow}>
-          <MdKeyboardArrowDown />
-        </div>
+        <MdKeyboardArrowDown className={styles.homeArrow} />
       </div>
     </div>
   );

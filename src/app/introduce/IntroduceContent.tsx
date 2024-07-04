@@ -2,14 +2,9 @@ export default function IntroduceContent() {
   return (
     <div>
       <div>
-        <h3>Personality</h3>
-        <p> personality A</p>
-        <p> personality B</p>
-      </div>
-      <div>
-        <h3>Hobby</h3>
-        <p>hobby A</p>
-        <p>hobby B</p>
+        <h3>Introduce</h3>
+        <p>introduction 1</p>
+        <p>introduction 2</p>
       </div>
     </div>
   );

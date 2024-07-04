@@ -10,7 +10,7 @@
 }
 
 .titleSection {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 /* type */
@@ -35,11 +35,13 @@
 /* summary */
 .summarySection div {
   font-size: 20px;
+  font-weight: 400;
   margin-bottom: 5px;
 }
 
 /* skills */
 .skillSection {
+  font-weight: 350;
   margin-top: 30px;
 }
 
