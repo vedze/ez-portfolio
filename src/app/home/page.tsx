@@ -1,5 +1,7 @@
 import styles from "@/styles/homepage.module.css";
-import { CATCH_PHRASE } from "@/util/constants";
+import { MdKeyboardArrowDown } from "react-icons/md";
+
+import { CATCH_PHRASE } from "@/config/constants";
 
 export default function HomePage() {
   return (
@@ -9,6 +11,7 @@ export default function HomePage() {
         <p>
           <span>이지은</span> 입니다.
         </p>
+        <MdKeyboardArrowDown className={styles.homeArrow} />
       </div>
     </div>
   );

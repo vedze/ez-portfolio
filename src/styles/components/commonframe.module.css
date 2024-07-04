@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: left;
 
-  height: 100vh;
-  padding: 30px;
+  padding: 30px 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }

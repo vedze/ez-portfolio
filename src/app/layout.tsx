@@ -3,8 +3,8 @@ import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 
 import "@/styles/globals.css";
-import Sidebar from "@/components/Sidebar";
-import Footer from "@/components/Footer";
+import styles from "@/styles/layout.module.css";
+import SideBar from "@/components/SideBar";
 
 const mont = Montserrat({ subsets: ["latin"], weight: ["400"] });
 const pretendard = localFont({
@@ -29,10 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={`${pretendard.variable}`}>
-      <body className={pretendard.className}>
-        <Sidebar />
-        <div style={{ marginRight: "200px" }}>{children}</div>
-        <Footer />
+      <body className={`${pretendard.className} ${styles.container}`}>
+        <div className={styles.content}>{children}</div>
+        <nav className={styles.sidebar}>
+          <SideBar />
+        </nav>
       </body>
     </html>
   );

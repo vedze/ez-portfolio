@@ -4,7 +4,7 @@ interface buttonProps {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-import styles from "@/styles/button.module.css";
+import styles from "@/styles/components/button.module.css";
 
 export default function Button({
   text,

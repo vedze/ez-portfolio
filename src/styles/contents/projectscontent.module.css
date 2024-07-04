@@ -1,0 +1,60 @@
+.projectsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project {
+  margin-bottom: 50px;
+}
+
+.titleSection {
+  margin-bottom: 40px;
+}
+
+/* type */
+.titleSection div {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* title */
+.titleSection h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+/* date */
+.titleSection time {
+  font-size: 18px;
+  font-weight: 350;
+}
+
+/* summary */
+.summarySection div {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+/* skills */
+.skillSection {
+  font-weight: 350;
+  margin-top: 30px;
+}
+
+.skillSection p,
+.linkSection p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.skillSection div,
+.linkSection div {
+  display: flex;
+  margin-bottom: 5px;
+
+  font-size: 20px;
+}

@@ -24,7 +24,8 @@
   font-size: 13px;
   font-family: var(--font-pretendard);
 
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 100px;
   padding: 10px;
   resize: none;

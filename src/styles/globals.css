@@ -1,16 +1,19 @@
 :root {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #fbf7f3;
 }
 
 body {
+  display: flex;
+  flex-direction: row;
+
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
 
-  /* -ms-overflow-style: none; */
+  -ms-overflow-style: none;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}

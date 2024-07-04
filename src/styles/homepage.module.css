@@ -8,21 +8,22 @@
   height: 100vh;
 
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   padding: 70px;
   box-sizing: border-box;
 }
 
 .homeText {
-  color: white;
-  font-size: 2em;
+  color: #fbf7f3;
+  font-size: 3rem;
   line-height: 1em;
-  text-align: left;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .homeText span {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -39,4 +40,9 @@
   width: 100%;
   height: 15px;
   background-color: #8daa77;
+}
+
+.homeArrow {
+  padding-top: 100px;
+  color: #fbf7f3;
 }

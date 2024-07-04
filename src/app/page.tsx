@@ -5,6 +5,7 @@ import Introduce from "./introduce/page";
 import Contact from "./contact/page";
 import Projects from "./projects/page";
 import Feedback from "./feedback/page";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Projects />
         <Contact />
         <Feedback />
+        <Footer />
       </div>
     </main>
   );

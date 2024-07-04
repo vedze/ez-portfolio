@@ -2,7 +2,7 @@ interface SectionProps {
   name: String;
 }
 
-import styles from "@/styles/section.module.css";
+import styles from "@/styles/components/section.module.css";
 
 export default function Section({ name }: SectionProps) {
   return (
