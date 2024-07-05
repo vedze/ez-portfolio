@@ -2,13 +2,13 @@
 
 import nodemailer from "nodemailer";
 
-type ContactFormType = {
+export type ContactFormType = {
   from: string; // 작성자
   subject: string; // 제목
   text: string; // 내용
 };
 
-type EmailFormType = {
+type ContactEmailFormType = {
   from: string; // 작성자
   to: string; // 내 메일
   subject: string; // 제목
@@ -29,7 +29,7 @@ export function contactForm({ from, subject, text }: ContactFormType) {
   });
 
   // mailing option
-  const emailForm: EmailFormType = {
+  const contactEmailForm: ContactEmailFormType = {
     from,
     to: process.env.MY_EMAIL || "",
     subject: `test ${subject}`,
@@ -41,5 +41,5 @@ export function contactForm({ from, subject, text }: ContactFormType) {
     `,
   };
 
-  return transporter.sendMail(emailForm);
+  return transporter.sendMail(contactEmailForm);
 }
