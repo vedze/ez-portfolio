@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "@/styles/contents/contactcontent.module.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function ContactContent() {
   const [contactData, setContactData] = useState({
@@ -26,6 +26,16 @@ export default function ContactContent() {
     console.log(contactData);
   };
 
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const handleResizeHeight = () => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = "auto";
+      textareaRef.current.style.height = `${
+        textareaRef.current.scrollHeight - 40
+      }px`;
+    }
+  };
+
   return (
     <form onSubmit={handleSubmit} className={styles.contactContent}>
       <div className={styles.contentGroup}>
@@ -44,7 +54,9 @@ export default function ContactContent() {
           name="text"
           placeholder="내용을 입력해주세요"
           onChange={handleChange}
-          className={styles.autosizeTextarea}
+          onInput={handleResizeHeight}
+          ref={textareaRef}
+          rows={1}
         />
       </div>
 
