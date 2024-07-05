@@ -41,7 +41,7 @@ export default function ContactContent() {
       <div className={styles.contentGroup}>
         <label htmlFor="subject">제목</label>
         <input
-          name="subject"
+          id="subject"
           type="text"
           placeholder="제목을 입력해주세요"
           onChange={handleChange}
@@ -51,7 +51,7 @@ export default function ContactContent() {
       <div className={styles.contentGroup}>
         <label htmlFor="text">본문</label>
         <textarea
-          name="text"
+          id="text"
           placeholder="내용을 입력해주세요"
           onChange={handleChange}
           onInput={handleResizeHeight}
@@ -63,7 +63,7 @@ export default function ContactContent() {
       <div className={styles.contentGroup}>
         <label htmlFor="from">보내는 분</label>
         <input
-          name="from"
+          id="from"
           type="text"
           placeholder="이메일 주소를 입력해주세요"
           onChange={handleChange}
