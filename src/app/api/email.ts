@@ -2,20 +2,20 @@
 
 import nodemailer from "nodemailer";
 
-interface ISendEmailFormType {
+type ContactFormType = {
   from: string; // 작성자
   subject: string; // 제목
   text: string; // 내용
-}
+};
 
-interface IReceiveEmailFormType {
+type EmailFormType = {
   from: string; // 작성자
   to: string; // 내 메일
   subject: string; // 제목
   html: string; // 이메일 htlm body
-}
+};
 
-export function sendEmail({ from, subject, text }: ISendEmailFormType) {
+export function contactForm({ from, subject, text }: ContactFormType) {
   // transporter
   const transporter = nodemailer.createTransport({
     service: "naver",
@@ -29,7 +29,7 @@ export function sendEmail({ from, subject, text }: ISendEmailFormType) {
   });
 
   // mailing option
-  const receiveEmailForm: IReceiveEmailFormType = {
+  const emailForm: EmailFormType = {
     from,
     to: process.env.MY_EMAIL || "",
     subject: `test ${subject}`,
@@ -41,5 +41,5 @@ export function sendEmail({ from, subject, text }: ISendEmailFormType) {
     `,
   };
 
-  return transporter.sendMail(receiveEmailForm);
+  return transporter.sendMail(emailForm);
 }
