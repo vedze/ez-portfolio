@@ -1,38 +1,26 @@
 "use client";
 
 import styles from "@/styles/contents/contactcontent.module.css";
-import { useRef, useState } from "react";
-import { sendContactEmail } from "@/app/api/send-email";
+import { ISendContactFormType } from "@/app/api/email";
+import { useRef } from "react";
 
-const initContactData = {
-  from: "",
-  subject: "",
-  text: "",
-};
-
-export default function ContactContent() {
-  const [contactData, setContactData] = useState(initContactData);
-
-  // 입력값 업데이트
-  const handleChange = (
+interface IContactFormProps {
+  contactData: ISendContactFormType;
+  handleChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const id = e.target.id;
-    const value = e.target.value;
+  ) => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+}
 
-    setContactData({ ...contactData, [id]: value });
-  };
-
-  // 이메일 Sending 함수
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // console.log("test: ", contactData); -> ok
-
-    e.preventDefault(); // 페이지 새로고침 방지
-    sendContactEmail(contactData);
-  };
-
-  // 반응형 TextArea 함수
+export default function ContactForm({
+  contactData,
+  handleChange,
+  handleSubmit,
+}: IContactFormProps) {
+  // textarea ref
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // 반응형 textarea
   const handleResizeHeight = () => {
     if (textareaRef.current) {
       textareaRef.current.style.height = "auto";
@@ -42,41 +30,42 @@ export default function ContactContent() {
     }
   };
 
+  // contact form
   return (
-    <form onSubmit={handleSubmit} className={styles.contactContent}>
+    <form onSubmit={handleSubmit} className={styles.contactForm}>
       <div className={styles.contentGroup}>
         <label htmlFor="subject">제목</label>
         <input
           id="subject"
           type="text"
-          placeholder="제목을 입력해주세요"
           onChange={handleChange}
+          value={contactData.subject}
+          placeholder="제목을 입력해주세요"
         />
       </div>
-
       <div className={styles.contentGroup}>
-        <label htmlFor="text">본문</label>
+        <label htmlFor="text">내용</label>
         <textarea
           id="text"
-          placeholder="내용을 입력해주세요"
           onChange={handleChange}
           onInput={handleResizeHeight}
           ref={textareaRef}
+          value={contactData.text}
           rows={1}
+          placeholder="내용을 입력해주세요"
         />
       </div>
-
       <div className={styles.contentGroup}>
         <label htmlFor="from">보내는 분</label>
         <input
           id="from"
           type="text"
-          placeholder="이메일 주소를 입력해주세요"
           onChange={handleChange}
+          value={contactData.from}
+          placeholder="이메일 주소를 입력해주세요"
         />
       </div>
-
-      <button type="submit" className={styles.submit}>
+      <button type="submit" className={styles.submitButton}>
         이메일 보내기
       </button>
     </form>
