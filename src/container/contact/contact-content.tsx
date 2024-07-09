@@ -2,30 +2,36 @@
 
 import styles from "@/styles/contents/contactcontent.module.css";
 import { useRef, useState } from "react";
+import { sendContactEmail } from "@/app/api/send-email";
+
+const initContactData = {
+  from: "",
+  subject: "",
+  text: "",
+};
 
 export default function ContactContent() {
-  const [contactData, setContactData] = useState({
-    from: "",
-    subject: "",
-    text: "",
-  });
+  const [contactData, setContactData] = useState(initContactData);
 
+  // 입력값 업데이트
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    // console.log(e.target.name);
-    // console.log(e.target.value);
-    const name = e.target.name;
+    const id = e.target.id;
     const value = e.target.value;
 
-    setContactData({ ...contactData, [name]: value });
-    // console.log(contactData);
+    setContactData({ ...contactData, [id]: value });
   };
 
-  const handleSubmit = (input: React.FormEvent<HTMLFormElement>) => {
-    console.log(contactData);
+  // 이메일 Sending 함수
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // console.log("test: ", contactData); -> ok
+
+    e.preventDefault(); // 페이지 새로고침 방지
+    sendContactEmail(contactData);
   };
 
+  // 반응형 TextArea 함수
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const handleResizeHeight = () => {
     if (textareaRef.current) {
