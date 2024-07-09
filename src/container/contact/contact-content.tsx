@@ -17,18 +17,21 @@ export default function ContactContent() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const id = e.target.id;
-    const value = e.target.value;
-
+    const { id, value } = e.target;
     setContactData({ ...contactData, [id]: value });
   };
 
   // 이메일 Sending 함수
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     // console.log("test: ", contactData); -> ok
 
     e.preventDefault(); // 페이지 새로고침 방지
-    sendContactEmail(contactData);
+    try {
+      await sendContactEmail(contactData);
+      setContactData(initContactData);
+    } catch (error) {
+      console.error("이메일 전송 중 오류가 발생했습니다: ", error);
+    }
   };
 
   // 반응형 TextArea 함수
@@ -51,6 +54,7 @@ export default function ContactContent() {
           type="text"
           placeholder="제목을 입력해주세요"
           onChange={handleChange}
+          value={contactData.subject}
         />
       </div>
 
@@ -63,6 +67,7 @@ export default function ContactContent() {
           onInput={handleResizeHeight}
           ref={textareaRef}
           rows={1}
+          value={contactData.text}
         />
       </div>
 
@@ -73,6 +78,7 @@ export default function ContactContent() {
           type="text"
           placeholder="이메일 주소를 입력해주세요"
           onChange={handleChange}
+          value={contactData.from}
         />
       </div>
 
