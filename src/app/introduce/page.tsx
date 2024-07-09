@@ -1,5 +1,5 @@
 import CommonFrame from "@/components/CommonFrame";
-import IntroduceContent from "@/container/introduce/introduce-content";
+import IntroduceContent from "@/container/introduce/IntroduceContent";
 
 export default function Introduce() {
   return (
