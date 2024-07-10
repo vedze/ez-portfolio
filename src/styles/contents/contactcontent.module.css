@@ -41,7 +41,7 @@
 
 .contentGroup textarea {
   resize: none;
-  /* height: 200px; */
+  height: 200px;
 }
 
 .submitButton {
