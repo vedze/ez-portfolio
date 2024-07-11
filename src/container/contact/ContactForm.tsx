@@ -32,8 +32,9 @@ export default function ContactForm({
 
   // contact form
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className={styles.contactForm}>
+      <div className={styles.contentGroup}>
+        <label htmlFor="from">보내는 분</label>
         <input
           required
           id="from"
@@ -42,9 +43,8 @@ export default function ContactForm({
           value={contactData.from}
           placeholder="이메일 주소를 입력해주세요"
         />
-        <label htmlFor="from">보내는 분 (e-mail, phone ...)</label>
       </div>
-      {/* <div className={styles.contentGroup}>
+      <div className={styles.contentGroup}>
         <label htmlFor="subject">제목</label>
         <input
           required
@@ -67,7 +67,7 @@ export default function ContactForm({
           // rows={1}
           placeholder="내용을 입력해주세요"
         />
-      </div> */}
+      </div>
       <button type="submit" className={styles.submitButton}>
         이메일 보내기
       </button>
